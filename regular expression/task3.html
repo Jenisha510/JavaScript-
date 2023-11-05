@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="phoneForm">
+        <label for="phoneNumber">Phone number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber">
+        <button type="button" onclick="validatemobileNumber()">Validate</button>
+        <p id="validationResult"></p>
+    </form>
+    <script>
+        function validatemobileNumber() {
+            var phoneNumberInput = document.getElementById("phoneNumber");
+            var phoneNumber = phoneNumberInput.value;
+
+            var regex = /^[7896]\d{9}$/;
+
+            if (regex.test(phoneNumber)) {
+                document.getElementById("validationResult").textContent = "Phone number is valid.";
+            } else {
+                document.getElementById("validationResult").textContent = "Phone number is invalid.";
+            }
+        }
+        </script>v
+</body>
+</html>

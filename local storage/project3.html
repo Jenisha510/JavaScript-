@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="dataform">
+        <div>
+            <label>EMPLOYEE  NAME:</label>
+            <input type="text" id="employeename">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label>SALARY:</label>
+            <input type="text" id="salary">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label>PF:</label>
+            <input type="text" id="pf">
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="saveData()">BOOK NOW</button>
+    </form>
+    <div>
+        <table class="output">
+            <thead>
+                <tr>
+                    <th>EMPLOYEE NAME</th>
+                    <th>SALARY</th>
+                    <th>PF DETAILS</th>
+                    </tr>
+            </thead>
+            <tbody id="inputdata">
+        
+            </tbody>
+        </table>
+    </div>
+    <script>
+   function saveData() {
+            const name = document.getElementById("employeename").value;
+            const salary = document.getElementById("salary").value;
+            const  pf= document.getElementById("pf").value;
+
+            const userData = {
+                name,
+                salary,
+                pf,
+            };
+         const output=JSON.parse(localStorage.setItem("data")) || [];
+         output.push(Data);
+         localStorage.setItem("data",JSON.stringify(output));
+         document.getElementById("dataform").reset();
+         displayUserData();
+         }
+         function displaydata(){
+      const userdata=JSON.parse(localStorage.getItem("data"))  || [];
+      const tableBody =document.getElementById("inputdata");
+      tableBody.innerHTML='';
+        
+
+      Data.forEach((user,index)=>{
+        const row=tableBody.insertCell(0);
+        const cellName=row.insertCell(1);
+        const cellSalary=row.insertCell(2);
+        const cellPf=row.insertCell(3);
+        const cellAction=row.insertCell(3);
+        
+
+        cellName.innerHTML=user.name;
+        cellSalary.innerHTML=user.salary;
+        cellPf.innerHTML=user.pf;
+        
+
+     const editButton=document.createElement("button");
+     editButton.textContent="Edit";
+     editButton.onclick=()=>editButton(index);
+
+     const deleteButton=document.createElement("button");
+     deleteButton.textContent="Edit";
+     deleteButton.onclick=()=>deleteButton(index);
+
+     cellActions.appendChild(editButton);
+     cellActions.appendChild(deleteButton);
+
+      });
+         }
+
+         function editUser(index){
+            const  userData=JSON.parse(localStorage.getItem("data")) || [];
+            document.getElementById("name").value=editedUser.name;
+            document.getElementById("salary").value=editedUser.salary;
+            document.getElementById("pf").value=editedUser.pf;
+
+
+        data.splice(index,1);
+        localStorage.setItem("data",JSON.stringify(data));
+              
+
+
+            
+            
+            
+
+          }
+
+    </script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</body>
+</html>

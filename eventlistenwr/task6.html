@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .label1{
+          height:30px ;
+          color:blue;
+          font-size: 20px;
+        }
+        .label2{
+          height:30px ;
+          color:blue;
+          font-size: 20px;
+        }
+        button{
+            background-color: greenyellow;
+            height:40px;
+            color:blue;
+        }
+        h3{
+            color:blue;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+     <label class="label1">Enter the value</label>
+     <input type="number" id="text1">
+     <br>
+     <br>
+     <br>
+     <label class="label2">Enter the value</label>
+     <input type="number" id="text2"><br><br>
+     <br>
+     <button onclick="operation()">Perform Operations</button>
+     <br>
+     <h3>Results:</h3>
+     <p id="additionResult"></p>
+     <p id="multiResult"></p>
+     <p id="divisionResult"></p>
+     <p id="subResult"></p>
+     <p id="modulusResult"></p>
+    <script>
+        function operation()
+        {
+            var num1 = parseFloat(document.getElementById("text1").value);
+            var num2 = parseFloat(document.getElementById("text2").value);
+            var addition = num1 + num2;
+            var multi = num1 * num2;
+            var div=num1 / num2;
+            var sub = num1 - num2;
+            var Modulus = num1 % num2;
+            document.getElementById("additionResult").innerHTML = "Addition: " + addition;
+            document.getElementById("multiResult").innerHTML = "multiplication: " + multi;
+            document.getElementById("divisionResult").innerHTML = "Division: " + div;
+            document.getElementById("subResult").innerHTML = "Substraction: " + sub;
+            document.getElementById("modulusResult").innerHTML = "Modulus: " + Modulus;
+        }
+    </script>
+</body>
+</html>

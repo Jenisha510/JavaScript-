@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(252, 176, 220);
+    
+}
+.buttoncolor{
+    background-color:rgb(192, 192, 247);
+    width:10%;
+    height:50px;
+    border:solid 2px rgb(226, 5, 171);
+    color:rgb(238, 39, 98);
+}
+
+.text{
+height:50px;
+border:solid 2px rgb(226, 5, 171);
+background-color:rgb(192, 192, 247);
+}
+.list{
+     border:solid 2px rgb(226, 5, 171);
+     width:20%;
+     color:rgb(238, 39, 98);
+}
+.image{
+    position:relative;
+    left:500px;
+    top:70px;
+ 
+    
+}
+.image1{
+    position:relative;
+    left:500px;
+    top:70px;
+    
+    
+}

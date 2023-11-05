@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+    <style>
+        .name {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name1 {
+            position: relative;
+            left: 115px;
+            border: solid 2px blue;
+        }
+
+        .name2 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name3 {
+            position: relative;
+            left: 120px;
+            border: solid 2px blue;
+        }
+
+        .name4 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name5 {
+            position: relative;
+            left: 135px;
+            border: solid 2px blue;
+        }
+
+        .name6 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name7 {
+            position: relative;
+            left: 78px;
+            border: solid 2px blue;
+        }
+
+        .name8 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name9 {
+            position: relative;
+            left: 76px;
+            border: solid 2px blue;
+        }
+
+        .name10 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name11 {
+            position: relative;
+            left: 130px;
+            border: solid 2px blue;
+        }
+
+        .name12 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name13 {
+            position: relative;
+            left: 95px;
+            border: solid 2px blue;
+        }
+
+        .name14 {
+            position: relative;
+            left: 30px;
+            color: white;
+        }
+
+        .name15 {
+            position: relative;
+            left: 80px;
+            border: solid 2px blue;
+        }
+
+        .name16 {
+            position: relative;
+            left: 35px;
+            color: white;
+        }
+
+        .name17 {
+            position: relative;
+            left: 220px;
+            border: solid 2px blue;
+        }
+
+        .name18 {
+            position: relative;
+            left: 220px;
+            color: white;
+            background-color: green;
+        }
+
+        #ADDRESS {
+            position: absolute;
+            bottom: 120px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(16, 16, 90);
+        }
+
+     body {
+            background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+        } 
+        #jeni,td,th{
+            border:1px solid rgb(46, 40, 40);
+
+        }
+    </style>
+</head>
+<body>
+<h1>HOTEL BOOKING</h1>
+
+<form id="dataForm">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name" for="firstname">FIRSTNAME:</label>
+            <input class="name1" type="text" id="firstname" name="firstname">
+            
+            <br>
+            <br>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name2" for="lastname">LASTNAME:</label>
+            <input class="name3" type="text" id="lastname" name="lastname">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name4" for="email">EMAIL ID:</label>
+            <input class="name5" type="email" id="email" name="email">
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name6" for="mobile">MOBILE NUMBER:</label>
+            <input class="name7" type="tel" id="mobilenumber" name="mobilenumber">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name8" for="number">COUNT OF ROOM:</label>
+            <input class="name9" type="number" id="number1" name="number1">
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name10" for="ID PROOF">ID PROOF:</label>
+            <input class="name11" type="tel" id="IDPROOF" name="ID PROOF">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name12" for="date">CHECK IN DATE:</label>
+            <input class="name13" type="date" id="date" name="date">
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <label class="name14" for="date">CHECK OUT DATE:</label>
+            <input class="name15" type="date" id="date1" name="date1">
+        </div>
+    </div>
+    <br>
+    <br>
+    <label class="name16" for="comments" id="ADDRESS">ADDRESS:</label>
+    <textarea class="name17" id="textbox" name="comments" rows="4" cols="50"></textarea>
+    <br>
+    <br>
+    <br>
+    <button class="name18" type="button" onclick="saveData()">BOOK NOW</button>
+</form>
+<table class="STORED DATA " id="jeni">
+    <thead>
+    <tr>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>EMAIL ID</th>
+        <th>MOBILE NUMBER</th>
+        <th>COUNT OF ROOM</th>
+        <th>ID PROOF</th>
+        <th>CHECK IN DATE</th>
+        <th>CHECK OUT DATE</th>
+        <th>ADDRESS</th>
+        <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody id="inputdata">
+
+    </tbody>
+</table>
+
+<script>
+    function saveData() {
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const mailid = document.getElementById("email").value;
+        const mobilenumber = document.getElementById("mobilenumber").value;
+        const Countofroom = document.getElementById("number1").value;
+        const Idproof = document.getElementById("IDPROOF").value;
+        const Checkinroom = document.getElementById("date").value;
+        const Checkoutroom = document.getElementById("date1").value;
+        const address = document.getElementById("textbox").value;
+
+        const userData = {
+            firstname,
+            lastname,
+            mailid,
+            mobilenumber,
+            Countofroom,
+            Idproof,
+            Checkinroom,
+            Checkoutroom,
+            address
+        };
+        const outputData = JSON.parse(localStorage.getItem("Data")) || [];
+        outputData.push(userData);
+        localStorage.setItem("Data", JSON.stringify(outputData));
+        document.getElementById("dataForm").reset();
+        displayUserData();
+    }
+
+    function displayUserData() {
+        const userData = JSON.parse(localStorage.getItem("Data")) || [];
+        const tableBody = document.getElementById("inputdata");
+        tableBody.innerHTML = '';
+        userData.forEach((user, index) => {
+            const row = tableBody.insertRow();
+            const cellFirstname = row.insertCell(0);
+            const cellLastname = row.insertCell(1);
+            const cellMailid = row.insertCell(2);
+            const cellMobileNumber = row.insertCell(3);
+            const cellCountofDate = row.insertCell(4);
+            const cellIdproof = row.insertCell(5);
+            const cellCheckinDate = row.insertCell(6);
+            const cellCheckoutRoom = row.insertCell(7);
+            const cellAddress = row.insertCell(8);
+            const cellActions = row.insertCell(9);
+
+            cellFirstname.innerHTML = user.firstname;
+            cellLastname.innerHTML = user.lastname;
+            cellMailid.innerHTML = user.mailid;
+            cellMobileNumber.innerHTML = user.mobilenumber;
+            cellCountofDate.innerHTML = user.Countofroom;
+            cellIdproof.innerHTML = user.Idproof;
+            cellCheckinDate.innerHTML = user.Checkinroom;
+            cellCheckoutRoom.innerHTML = user.Checkoutroom;
+            cellAddress.innerHTML = user.address;
+
+            const editButton = document.createElement("button");
+            editButton.textContent = "Edit";
+            editButton.onclick = () => editUser(index);
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = () => deleteUser(index);
+
+            cellActions.appendChild(editButton);
+            cellActions.appendChild(deleteButton);
+        })
+    }
+
+    function editUser(index) {
+        const userData = JSON.parse(localStorage.getItem("Data")) || [];
+        const editedUser = userData[index];
+        document.getElementById("firstname").value = editedUser.firstname;
+        document.getElementById("lastname").value = editedUser.lastname;
+        document.getElementById("email").value = editedUser.mailid;
+        document.getElementById("mobilenumber").value = editedUser.mobilenumber;
+        document.getElementById("number1").value = editedUser.Countofroom;
+        document.getElementById("IDPROOF").value = editedUser.Idproof;
+        document.getElementById("date").value = editedUser.Checkinroom;
+        document.getElementById("date1").value = editedUser.Checkoutroom;
+        document.getElementById("textbox").value = editedUser.address;
+
+        userData.splice(index, 1);
+        localStorage.setItem("Data", JSON.stringify(userData));
+        displayUserData();
+    }
+
+    displayUserData();
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

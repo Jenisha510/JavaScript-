@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  type="text"  id="Inputtext">
+    <input  type="text"  id="Inputtext1">
+    <button type="button" id="button">BUTTON</button>
+    <script>
+        var text1=document.getElementById("Inputtext");
+        var text2=document.getElementById("Inputtext1");
+    function formvalidation(){
+        if(text1.value ==="" || text2.value === null ){
+        alert("One of the data is empty");
+        }
+        else{
+            alert("the data is  not empty");
+        }
+    }
+    var button=document.getElementById("button");
+    button.addEventListener("click",formvalidation);
+</script>
+</body>
+</html>

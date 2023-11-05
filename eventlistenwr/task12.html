@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Manipulation</title>
+</head>
+<body>
+  <label for="inputDate">Enter a date:</label>
+  <input type="date" id="inputDate">
+  <button onclick="datechange()">Display Dates</button>
+
+  <h5>DATES</h5>
+  <label>Adding 5days</label>
+  <input type="text" id="add" >
+  <br>
+  <br>
+  <label>subtracting 5days </label>
+  <input type="text" id="sub" >
+
+  <script>
+    function datechange() {
+      var inputDate = new Date(document.getElementById("inputDate").value);
+      var add = new Date(inputDate);
+      add.setDate(add.getDate() + 5);
+      var sub = new Date(inputDate);
+      sub.setDate(sub.getDate() - 5);
+      document.getElementById("add").value = add.toDateString();
+      document.getElementById("sub").value = sub.toDateString();
+    }
+  </script>
+</body>
+</html>

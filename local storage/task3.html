@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form>
+        <input type="text" id="text1" placeholder="First Name">
+        <input type="text" id="text2" placeholder="Last Name"><br><br>
+        <button onclick="log(event)">Login</button>
+        <button onclick="signup()">Signup</button>
+    </form>
+    <script>
+        function log(event) {
+            event.preventDefault();
+
+            const Name1 = document.getElementById("text1").value;//id call and storing process in variable//
+            const Name2= document.getElementById("text2").value;
+
+          
+            localStorage.setItem("firstName", Name1);//then using localstorage for storing purpose//
+            localStorage.setItem("lastName", Name2);//JSON storage medium like Firstnae and lastname//using setitem//
+
+            window.location.href = "task2.html";//display another webpage so using window.location//
+        }
+    </script>
+</body>
+</html>

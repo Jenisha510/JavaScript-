@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+<div class="image">
+    <input class="text" type="text.box" id="inputbox">
+    <button class= "buttoncolor" type="button" onclick="addcard()" id="button1">ADD</button>
+</div>
+<br>
+<br>
+   <div class="image1">
+    <ul class="list" id="unorderlist"><h1>list</h1></ul>
+   </div>
+
+ <script>
+    function addcard(){
+        var textbox1 =document.getElementById("inputbox");
+        var buttonbox=document.getElementById("button1");
+        var inputvalue=textbox1.value;
+        var unorderlists=document.getElementById("unorderlist");
+        var lists=document.createElement("li");
+        lists.textContent=inputvalue;
+        unorderlists.appendChild(lists);
+           } 
+</script>
+</body>
+</html>

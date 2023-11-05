@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <h1>Display Data</h1>
+    <p id="display"></p>
+    <script>
+        
+        const first= localStorage.getItem("firstName");//geth data from firstname and lastname and store in variable//
+        const last = localStorage.getItem("lastName");//
+
+     
+        const displayElement = document.getElementById("display"); //display id will calling//
+        if (first && last) {
+            displayElement.textContent = "Welcome  " + first + " " + last + " ...!";//the data will occure in the both text box if condition display otherwise else//
+        } else {
+            displayElement.textContent = "No data found.";
+        }
+    </script>
+</body>
+</html>

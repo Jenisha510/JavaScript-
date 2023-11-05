@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgb(114, 106, 238) , rgb(231, 77, 149));
+           }
+        form{
+            width:50%;
+            height:400px;
+            position:relative;
+            left:350px;
+            top:70px;
+            animation-name: example;
+            animation-duration: 14s;
+            border: solid rgb(98, 112, 233);
+           }
+        @keyframes example {
+         from {background-color:rgba(250, 101, 205, 0.719);}
+         to {background-color: rgb(178, 224, 230);}
+         }
+         .rainbow-text {
+          background-image: linear-gradient(to left, rgb(173, 43, 173), indigo, blue, green, yellow, orange, red);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+          text-align: center;
+        }
+         .image1{
+         position:relative;
+         left:100px;
+         top:70px;
+
+       }
+
+.image2{
+    position:relative;
+    left:200px;
+    top:70px;
+    color:gray;
+}
+.container:hover .image1 {
+  opacity: 0.2;
+}
+.image2:hover{
+    color:blue;
+}
+.row{
+   background-color: rgb(78, 197, 23);
+   height:30px;
+}
+.row1{
+    background-color: white;
+    height:30px;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="rainbow-text">SQUARE CALCULATION</h1>
+    <script type="text/javascript">
+        function getsquare(){
+            var number=document.getElementById("number").value;
+            alert("square value:" +number*number);
+        }
+      </script>
+      <div>
+    <form class="container">
+        <br>
+        <br>
+        Enter value:<input class="row1" type="text" id="number" name="number"/>
+        <input class="row"type="button" value="square" onclick="getsquare(3)"/>
+        <br>
+        <img class=" image1"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1FtkwYiYNiXIgXesCn8KFuK2RUZtiLPgNA&usqp=CAU" height=150px" width="150px" alt="image">
+        <h1 class="image2">Area of square=a*a</h1>
+    </form>
+   
+</div>
+    
+</body>
+</html>

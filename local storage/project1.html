@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROOM BOOKING</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       .name{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name1{
+    position:relative;
+    left:115px;
+    border:solid 2px blue;
+
+}
+.name2{
+    position:relative;
+    left:30px;
+    color:white;
+
+}
+.name3{
+    position:relative;
+    left:120px;
+    border:solid 2px blue;
+
+}
+.name4{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name5{
+    position:relative;
+    left:135px;
+    border:solid 2px blue;
+
+}
+.name6{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name7{
+    position:relative;
+    left:78px;
+    border:solid 2px blue;
+
+}
+.name8{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name9{
+    position:relative;
+    left:76px;
+    border:solid 2px blue;
+
+}
+.name10{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name11{
+    position:relative;
+    left:130px;
+    border:solid 2px blue;
+
+}
+.name12{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name13{
+    position:relative;
+    left:95px;
+    border:solid 2px blue;
+
+}
+.name14{
+    position:relative;
+    left:30px;
+    color:white;
+}
+.name15{
+    position:relative;
+    left:80px;
+    border:solid 2px blue;
+
+}
+.name16{
+    position:relative;
+    left:35px;
+    color:white;
+}
+.name17{
+    position:relative;
+    left:220px;
+    border:solid 2px blue;
+
+}
+.name18{
+    position:relative;
+    left:220px;
+    color:white;
+    background-color: green;
+
+}
+#ADDRESS{
+position: absolute;
+bottom: 120px;
+}
+h1{
+    text-align: center;
+    color:rgb(16, 16, 90);
+}
+body{
+    background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+background:cover;
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.8;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 >ROOM BOOKING</h1>
+        <form id="userInfoForm">
+            <!-- Use Bootstrap classes for form layout -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6  col-lg-3 col-xl-4 ">
+                   <label for="name">FIRSTNAME:</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class=" col-sm-12 col-md-6  col-lg-3 col-xl-4 col-xxl-4">
+                        <label for="name">LASTNAME:</label>
+                             <input type="text" class="form-control" id="name1" required>
+                         </div>
+                        <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-4 col-xxl-4">
+                     <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" required>
+                    </div>
+               <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-4 col-xxl-4">
+                   <label for="sex">Sex:</label>
+                        <input type="text" class="form-control" id="sex" required>
+                    </div>
+                
+                <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-4 col-xxl-4">
+                   <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                
+                <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-4 col-xxl-4">
+                    <label for="mobile">Mobile No:</label>
+                        <input type="tel" class="form-control" id="mobile" required>
+                    </div>
+                
+                <div class="col-sm-12 col-md-6  col-lg-3 col-xl-4 col-xxl-4">
+                <label for="location">Location:</label>
+                        <input type="text" class="form-control" id="location" required>
+                    </div>
+               
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="saveData()">BOOK NOW</button>
+        </form>
+
+        <h2 class="mt-4">Stored User Data</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userData">
+            </tbody>
+        </table>
+    </div>
+
+    
+
+
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+
+    <script>
+        // Function to save user data to local storage
+        function saveData() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const sex = document.getElementById("sex").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobile").value;
+            const location = document.getElementById("location").value;
+
+            const userData = {
+                name,
+                age,
+                sex,
+                email,
+                mobile,
+                location
+            };
+
+            // Get existing data from local storage or initialize as an empty array
+            const existingData = JSON.parse(localStorage.getItem("userData")) || [];
+
+            // Add the new user data to the existing data
+            existingData.push(userData);
+
+            // Store the updated data in local storage
+            localStorage.setItem("userData", JSON.stringify(existingData));
+
+            // Clear the form inputs
+            document.getElementById("userInfoForm").reset();
+
+            // Refresh the table
+            displayUserData();
+        }
+
+        // Function to display user data in a table
+        function displayUserData() {
+            const userData = JSON.parse(localStorage.getItem("userData")) || [];
+            const tableBody = document.getElementById("userData");
+            tableBody.innerHTML = '';
+
+            userData.forEach((user, index) => {
+                const row = tableBody.insertRow();
+                const cellName = row.insertCell(0);
+                const cellAge = row.insertCell(1);
+                const cellSex = row.insertCell(2);
+                const cellEmail = row.insertCell(3);
+                const cellMobile = row.insertCell(4);
+                const cellLocation = row.insertCell(5);
+                const cellActions = row.insertCell(6);
+
+                cellName.innerHTML = user.name;
+                cellAge.innerHTML = user.age;
+                cellSex.innerHTML = user.sex;
+                cellEmail.innerHTML = user.email;
+                cellMobile.innerHTML = user.mobile;
+                cellLocation.innerHTML = user.location;
+
+                // Create edit and delete buttons
+                const editButton = document.createElement("button");
+                editButton.textContent = "Edit";
+                editButton.onclick = () => editUser(index);
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = () => deleteUser(index);
+
+                cellActions.appendChild(editButton);
+                cellActions.appendChild(deleteButton);
+            });
+        }
+
+        // Function to edit user data
+        function editUser(index) {
+            const userData = JSON.parse(localStorage.getItem("userData")) || [];
+            const editedUser = userData[index];
+
+            document.getElementById("name").value = editedUser.name;
+            document.getElementById("age").value = editedUser.age;
+            document.getElementById("sex").value = editedUser.sex;
+            document.getElementById("email").value = editedUser.email;
+            document.getElementById("mobile").value = editedUser.mobile;
+            document.getElementById("location").value = editedUser.location;
+
+            // Remove the edited user from the array
+            userData.splice(index, 1);
+
+            // Update local storage
+            localStorage.setItem("userData", JSON.stringify(userData));
+
+            // Refresh the table
+            displayUserData();
+        }
+
+        // Function to delete user data
+        function deleteUser(index) {
+            const userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+            // Remove the user from the array
+            userData.splice(index, 1);
+
+            // Update local storage
+            localStorage.setItem("userData", JSON.stringify(userData));
+
+            // Refresh the table
+            displayUserData();
+        }
+
+        // Display user data when the page loads
+        displayUserData();
+    </script>
+</body>
+</html>
+
+

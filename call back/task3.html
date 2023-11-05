@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function duplicate(input, callback) {
+        var result = '';
+        for (var i = 0; i < input.length; i++) {
+          result += input[i] + input[i];
+        }
+        callback(result);
+      }
+      
+      var string = "ADRIAN";
+      var string1 = "SSSSNAKE";
+      
+      function duplicatString(doubleString) {
+        console.log(doubleString);
+      }
+      
+      duplicate(string, duplicatString);
+      duplicate(string1, duplicatString);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textInput">
+    <input type="text" id="textInput1">
+    <button id="button" onclick="check()">BUTTON</button>
+   <script>
+   var text=document.getElementById("textInput");
+   var text1=document.getElementById("textInput1");
+  
+  
+   function check(){
+   
+    if(text.value===text1.value){
+            alert("Data's are equal " );
+           }
+    else{
+            alert("Data's not are equal " );
+          
+        }
+       
+           }
+
+           var button=document.getElementById("button");
+           button.addEventListener("click", check);
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //string function//
+        //single in single quotes//
+             var mystring='jeni';
+             console.log(mystring);
+            var mystring="jenisha";
+             console.log(mystring);
+    //when string  work//
+    var str1="it's jeni";
+    console.log(str1);
+    var str2='its "jeni"';
+    console.log(str2);
+    var str3="its 'me' jeni";
+    console.log(str3);
+     //when string not work//
+    // var str4="its me jeni';
+    // console.log(str4);
+
+
+     //blackslash in string//escape secequence//
+     var str4='it\'s me jeni';
+     console.log(str5);
+    var str5="its \"me\" jenisha.";
+    console.log(str5);
+    var str6="its \'me\' jenisha.";
+    console.log(str6);
+       //escape secequences//
+       var str7="its me jenisha.\n i am a good girl";//create a new line\n//
+       console.log(str7);
+       var str8="its me jenisha.\b i am a good girl";
+       console.log(str8);
+       var str7="its me \jenisha\ i am a good girl";
+       console.log(str7);
+       var str7="its me \\jenisha\\ i am a good girl";
+       console.log(str7);
+
+       //length f string//
+       var str7="jenisha";
+       console.log(str7.length);
+       var str7="je\nisha";
+       console.log(str7.length);
+       var str7="je\\nisha";
+       console.log(str7.length);
+       var str7="je  nisha";//2space//
+       console.log(str7.length);
+       var str7="je\risha";
+       console.log(str7.length);
+       var str7="jerisha";
+       console.log(str7.length);
+       //finding a string another string//
+       //indexof method//
+       var str7="Hello jenisha good morning";
+       var pos=str7.indexOf("jenisha");//position by jenisha//
+       var pos=str7.indexOf(' ');//position by space//
+       var pos=str7.indexOf('g');//position by g//
+       var pos=str7.indexOf('e');//position by e first one will choose//
+       var pos=str7.indexOf('z'); //position by z it is not contain a sentence so output -1//
+       console.log(pos);
+        //lastindexof method//
+        var str8="Hello jenisha good morning jenisha";
+        var pos=str8.lastIndexOf("jenisha");//position by jenisha choosing 2nd value//
+        var pos=str8.lastIndexOf("mass");
+        console.log(pos);
+        //searching forward and backforwars//
+        var str9="Hello jenisha good morning jenisha";
+        var pos1=str9.indexOf("jenisha",20);
+        console.log(pos1);
+        var str10="Hello jenisha good morning jenisha";
+        var pos2=str10.lastIndexOf("jenisha",20);
+        console.log(pos2);
+         //searching a pattern//
+         var str11="Hello Jenisha good morning jenisha";
+         var pos1=str11.search("jenisha");//casesentiveone//
+         var pos1=str11.search("Jenisha");//casesentiveone//
+         var str12="Hello Jenisha good morning jenisha";
+         var pos3=str12.search("/jenisha/i");
+         console.log(pos3);
+         //extracting from a substring from a string//
+         var str11="Hello Jenisha good morning jenisha";
+         var pose=str11.slice(6,13);
+         console.log(pose);
+         var str12="Hello Jenisha good morning jenisha";
+         var pose2=str12.slice(-15,-3);
+         console.log(pose2);
+         var str13="Hello Jenisha good morning jenisha";
+         var pose2=str13.slice(19);
+         console.log(pose2);
+         var str14="Hello Jenisha good morning jenisha";
+         console.log(str14.substr(19));
+         //replace method//
+         var str="hi i am jenisha kesan";
+         console.log(str.replace("kesan","venkatesh"));
+         //uppercase//
+         var str="jenisha";
+         console.log(str.toUpperCase());
+         var str="jenisha";
+         var string=str.toLowerCase();
+         console.log(string);
+         //concatenating two or more strings//
+         var name="jeni";
+         var lastname="sha"
+         var join=name + " " +lastname;// using+opertaor//
+         console.log(join);
+         var name="jeni";
+         name +="sha";
+         console.log(name);
+         //individual charAt//
+         var name="jenisha";
+         console.log(name.charAt());
+         console.log(name.charAt(5));
+         console.log(name.charAt(0));
+         console.log(name.charAt(10));
+         console.log(str[10]);
+         //splitting string//
+         
+         
+
+
+
+    </script>
+</body>
+</html>

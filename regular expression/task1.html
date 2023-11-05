@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Username Validation</title>
+</head>
+<body>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <br><br>
+  <label for="button">Button:</label>
+  <button class="button" type="button" id="myBtn">clickme</button>
+  
+  <script>
+    document.getElementById("myBtn").addEventListener("click", function () {
+      var name = document.getElementById("username").value;
+      var regularExpression = /^[A-Za-z][A-Za-z0-9_]{5,10}$/;
+
+      if (regularExpression.test(name)) {
+        console.log("Valid");
+      } else {
+        console.log("Invalid");
+      }
+    });
+  </script>
+</body>
+</html>

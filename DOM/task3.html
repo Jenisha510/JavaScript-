@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.button1{
+    background-color: yellowgreen;
+    color:yellow;
+    height:30px;
+    width:100px;
+}
+    </style>
+</head>
+<body>
+    <button type="button" class="button1" id="btn" onclick="change()" >Clickme</button>
+    <script>
+    function change()
+    {
+    var oldname=document.getElementById("btn");
+    oldname.textContent = "Thank You!";
+    
+    }
+    </script>
+</body>
+</html>

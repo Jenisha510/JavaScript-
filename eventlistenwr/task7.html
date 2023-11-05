@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  type="number"  id="input">
+   <button   onclick="eventloop()">BUTTON</button>
+    <select   id="outputdata">select box</select>
+      
+<script>
+    function eventloop(){
+    var data=document.getElementById("input").value;
+    var output='<option>select option</option>'
+    
+    for( i=0; i<=data; i++){
+    output+='<option value="' +i+ '">' +i+ '</option>'
+     }
+     document.getElementById("outputdata").innerHTML=output
+   
+    }
+</script>
+</body>
+</html>

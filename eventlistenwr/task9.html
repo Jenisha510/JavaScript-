@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input   type="number"  id="input">
+   <button  onclick=" eventloop()" >BUTTON</button>
+    <select   id="outputdata" onchange="eventloop1()">select box</select>
+    <select id="outputdata1">select box</select>
+   
+<script>
+    function eventloop(){
+    var data1=document.getElementById("input").value;
+    var output='<option>select option</option>'
+    
+    for( i=0; i<=data1; i++){
+        output+='<option value="' +i+ '">' +i+ '</option>'
+     }
+     document.getElementById("outputdata").innerHTML=output
+   
+    }
+
+    function eventloop1(){
+       
+    var data2=document.getElementById("outputdata").value;
+    var output='<option>select option</option>'
+    
+    for( i=0; i<=data2; i++){
+    output+='<option value="' +i+ '">' +i+ '</option>'
+     }
+     document.getElementById("outputdata1").innerHTML=output
+   
+    }
+</script>
+</body>
+</html>

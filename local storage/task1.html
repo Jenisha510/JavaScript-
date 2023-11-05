@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student DATA</h1>
+    <P>ENTER THE NAME</P>
+    <input type="text" id="name">
+    <button onclick="save()">SAVE</button>
+    <button onclick="clearStorage()">clear</button>
+    <br>
+    <div  id="display">DISPLAY</div>
+   <script>
+    function save(){
+    var usname=document.getElementById("name").value
+    localStorage.setItem("username",usname);
+    show();
+    }
+    function show(){
+    var name=localStorage.getItem("username");
+    document.getElementById("display").textContent="hello i am " +name;
+
+    }
+     function clearStorage(){
+    localStorage.clear()
+    show();
+    }
+   </script>
+
+</body>
+</html>

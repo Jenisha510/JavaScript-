@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="helloworld" onclick="username()">PrintHello</button>
+    <button id="Getworld" onclick="username1()">GetHello</button>
+    <script>
+       var button=document.getElementById("helloworld");
+       var button1=document.getElementById("Getworld");
+       
+       
+       button.addEventListener("onclick", username());
+       function username(){
+        
+        alert("hellow world");
+        
+              }
+              button1.addEventListener("click", username1());
+             function username1()
+           {
+            var button1=prompt("Enter the name:");
+           
+            alert("Hello " + button1);
+            
+           
+        }      
+    </script>
+</body>
+</html>
