@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function evalNumbers(num1, num2, op) {
+
+if(op == "add"){
+  console.log( num1+num2);
+}
+else if(op == "subtract"){
+  console.log(num1-num2);
+}
+else if(op == "multiply"){
+  console.log(num1*num2);
+}
+else if(op == "divide"){
+  console.log(num1/num2);
+}
+else if(op == "modulus"){
+  console.log(num1%num2);
+}
+else{
+   console.log( "this is an invalid operation");  
+}
+}
+
+evalNumbers(5,10,"add") 
+evalNumbers(40,8,"subtract") 
+evalNumbers(12,4,"multiply") 
+evalNumbers(14,7,"divide") 
+evalNumbers(22,3,"modulus") 
+evalNumbers(20,16,"rectangle") 
+       
+    </script>
+
+</body>
+</html>
